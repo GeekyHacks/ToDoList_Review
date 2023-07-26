@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap')
+@import global
+
+// $trashcan: 
+body
+    @include columnFlex
+    justify-content: center
+    align-items: center
+    background-color: $primary-color
+    font-family: 'Roboto', sans-serif
+    white-space: pre-wrap
+    word-wrap: break-word
+    padding: 3rem
+img
+    transition: all 0.5s
+.container
+    @include columnFlex
+    justify-content: center
+    align-items: stretch
+    background-color: $secondary-color
+    border-radius: 4px
+    box-shadow: $box-shadow
+    padding: 10px
+    text-align: left
+#tasksList
+    @include columnFlex
+    gap: .2rem
+div, li
+    @include rowFlex
+    justify-content: space-between
+    align-items: center
+    border-radius: 4px
+    // margin-top: .3rem
+    border: 0
+    padding: .1rem
+    gap: .1rem
+    margin-bottom: .25rem
+li
+    justify-content: space-evenly
+    margin-bottom: 0
+    padding: .5rem
+
+#newTask
+    &::focus
+        background: $inputColor
+div
+    gap: .2rem
+    h1
+        @include smlInterH3
+
+input
+    @include smlInterP
+    border: 0
+    padding: .3rem
+    align-self: stretch
+    border-radius: 4px
+
+#userInput
+    height: 1.5rem
+    width: 100%
+    // margin-bottom: .3rem
+
+#addItem
+    flex: .9
+    outline: none
+#checkB
+    flex: .1
+    border-radius: 4px
+    height: 1.3rem
+    align-self: center
+    cursor: pointer
+    transition: all 0.5s
+
+#recyclImg, #addBtn,#dotsImg,#trash
+    height: 1rem
+    width: 1rem
+    opacity: .5
+    &:hover
+        opacity: 1
+#trash
+    visibility: visible
+#clearAllBtn
+    @include button
+    margin-top: .3rem
+
+    &:active
+        transform: scale(0.98)
+
+    &:focus
+        outline: 0
+.edit
+    background-color: $inputColor
+.hide
+    visibility: hidden
+.show
+    visibility: visible
