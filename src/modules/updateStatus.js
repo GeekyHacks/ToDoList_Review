@@ -1,7 +1,7 @@
 import { taskarr } from './addTask.js';
 import { saveData } from './userInput.js';
 
-export class TaskStatus {
+export default class TaskStatus {
   static updateStatus = () => {
     const checkB = document.querySelectorAll('.checkB');
 
