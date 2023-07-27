@@ -37,9 +37,6 @@ export default (task) => {
   taskDescription.forEach((task, index) => {
     task.addEventListener('click', (event) => {
       task.classList.add('edit');
-      // if (event === false) {
-      //   taskDescription.parentElement.addEventListener('click', () => task.classList.remove('edit'));
-      // }
       return event.preventDefault(task.classList.remove('edit'));
     });
 
@@ -47,7 +44,6 @@ export default (task) => {
       event.preventDefault();
       task.readOnly = false;
       task.classList.remove('edit');
-      // RTCRtpReceiver;
 
       return event.preventDefault();
     });
@@ -58,6 +54,4 @@ export default (task) => {
       saveData(taskarr);
     });
   });
-
-  // taskDescription.parentElement.addEventListener('click', () => task.classList.remove('edit'));
 };
